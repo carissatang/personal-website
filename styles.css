@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #B0969E;
+}
+
+p {
+  color: white;
+  font-weight: 100;
+  font-size: 24px;
+}
+
+h2 {
+  color: white;
+  font-weight: 300;
+}
+
+/*Navigation Bar*/
+.navbar {
+  display: flex;
+  background-color: #6D697C;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.navbar li {
+  display: inline-block;
+  padding: 20px 30px;
+}
+.navbar li a {
+  transition: all 0.3s ease 0s;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 100;
+  font-size: 18px;
+}
+.navbar a:hover {
+  background-color: #D0C2BC;
+  padding: 15px 25px;
+  opacity: 0.5;
+  color: black;
+}
+
+/*Header for About, Portfolio, and Contact*/
+.header {
+  text-align: center;
+  color: white;
+  padding: 30px;
+  font-size: 45px;
+}
+
+/*HOMEPAGE*/
+/*Header*/
+.name-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 753px;
+  background-color: #837A89;
+
+}
+.name-header a {
+  display: flex;
+  transition: all 0.3s ease 0s;
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  align-items: stretch;
+  font-weight: 300;
+  font-size: 80px;
+  width: 800px;
+  height: 300px;
+  padding: 110px 50px;
+}
+.name-header a:hover {
+  background-color: #D0C2BC;
+  opacity: 0.6;
+  opacity: 0.9;
+  color: white;
+}
+
+/*ABOUT PAGE*/
+/*TYPEWRITER ANIMATION*/
+.bio-intro {
+  width: 30ch;
+  font-size: 19px;
+  animation: animated-text 4s steps(31,end) 1s 1 normal both,
+             animated-cursor 900ms steps(31,end) infinite;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 110px;
+}
+
+@keyframes animated-text{
+  from {
+    width: 0;
+  }
+  to {
+    width: 31ch;
+  }
+}
+
+@keyframes animated-cursor{
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/*BIOGRAPHY*/
+.biography {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bio-image {
+  display: flex;
+  flex: 0 0 500px;
+  height:510px;
+  border: 5px solid #D0C2BC;
+}
+.bio-para {
+  display: flex;
+  max-width: 600px;
+  font-size: 26px;
+  background-color: #D0C2BC;
+  padding: 35px;
+}
+
+/*PORTFOLIO*/
+.flip-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+.card {
+  width: 530px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #DBD7D4;
+  border: 2px solid #D0C2BC;
+  font-size: 26px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-cards:hover .card{
+  transform: rotateY(180deg);
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/*CONTACT*/
+.socials {
+  padding: 60px;
+}
